@@ -1,7 +1,3 @@
-### CodeMore
-
-
-
 #### http2demo
 
 1. load **hackerone.http2.out** with wireshark
