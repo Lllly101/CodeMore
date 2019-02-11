@@ -17,8 +17,7 @@
 #### Caution
 
 1. Openssl version must supports ALPN
-
-
+2. If you want to enable server push characteristic, you must download the nginx version greater than 1.13.9 because the **http2_push** directive appears in version 1.13.9.
 
 #### Appendix
 
