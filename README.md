@@ -2,7 +2,7 @@
 
 1. load **hackerone.http2.out** with wireshark
 
-2. open **Preference->Protocols->SSL**, find **(pre)-Master-secret-key** log file , load the **sessions.random.key.txt**
+2. open **Preference->Protocols->SSL**, find **(pre)-Master-secret-key log file** option , load the **sessions.random.key.txt**
 
    ![image-20190210211349249](./http2demo/images/http2demo.png)
 
