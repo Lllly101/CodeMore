@@ -32,3 +32,6 @@
 | Ubuntu 14.04 LTS                       | 1.0.1f          | NPN              |
 | Ubuntu 16.04 LTS                       | 1.0.2g          | ALPN and NPN     |
 
+
+
+You can read Why we need HTTPS and High-Performance-Browser-Networking for more info.
