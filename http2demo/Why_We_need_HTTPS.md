@@ -136,39 +136,6 @@ Server:  Key = g^b x A  ===> key = g^b x g^a mod p
 **前向安全**或**前向保密**（英语：Forward Secrecy，缩写：FS），有时也被称为**完美前向安全**[[1\]](https://zh.wikipedia.org/wiki/%E5%89%8D%E5%90%91%E5%AE%89%E5%85%A8%E6%80%A7#cite_note-1)（英语：Perfect Forward Secrecy，缩写：PFS），是[密码学](https://zh.wikipedia.org/wiki/%E5%AF%86%E7%A0%81%E5%AD%A6)中通讯协议的安全属性，指的是长期使用的主[密钥](https://zh.wikipedia.org/wiki/%E5%AF%86%E9%92%A5)泄漏不会导致过去的[会话密钥](https://zh.wikipedia.org/wiki/%E6%9C%83%E8%A9%B1%E5%AF%86%E9%91%B0)泄漏。
 
 
-
-## ToDo
-
-### HTTP2.0
-
-#### 为什么需要设计http2.0
-
-#### HTTP2.0与http1.1的区别
-
-HTTP2.0主要有4个特性：
-
-1. 二进制协议
-2. 多路复用
-3. 头压缩
-4. 服务器推送
-
-#### http2.0的安全问题
-
-#### 如何抓取http2.0数据包
-
-1. 获取浏览器与服务器通信时的
-
-#### ALPN和NPN是什么
-
-NPN（Next Protocol Negotiation，下一代协议协商），是一个 TLS 扩展，由 Google 在开发 SPDY 协议时提出。随着 SPDY 被 HTTP/2 取代，NPN 也被修订为 ALPN（Application Layer Protocol Negotiation，应用层协议协商）。二者目标一致，但实现细节不一样，相互不兼容。以下是它们主要差别：
-
-- NPN 是服务端发送所支持的 HTTP 协议列表，由客户端选择；而 ALPN 是客户端发送所支持的 HTTP 协议列表，由服务端选择；
-- NPN 的协商结果是在 Change Cipher Spec 之后加密发送给服务端；而 ALPN 的协商结果是通过 Server Hello 明文发给客户端；
-
-
-
-
-
 ### 参考
 
 1. https://www.wst.space/ssl-part-2-diffie-hellman-key-exchange/
