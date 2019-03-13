@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 """
 R = (A * Rn-1 + C) % M
+A C M 是常数
 """
 
 class PRNG():
