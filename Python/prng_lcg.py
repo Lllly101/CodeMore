@@ -4,28 +4,22 @@ R = (A * Rn-1 + C) % M
 """
 
 class PRNG():
+    a =  2**32
+    c = 1
+    m = 22695477
     def __init__(self, seed):
-        self.a =  2**32
-        self.c = 1
-        self.m = 22695477
-        self.seed = seed
-
-    def generator(self, status=0):
-        if status:
-            self.r = (self.a * status + self.c) % self.m
-        else:
-            self.r = (self.a * self.seed + self.c) % self.m
-        return self.r
+        self.state = seed
 
     def next(self):
-        return self.generator(self.r)
+        self.state = (self.a * self.state + self.c) % self.m
+        return self.state
 
 if __name__ == "__main__":
     prng = PRNG(1013904223)
-    print(prng.generator())
 
     counts = 0
     while True:
         print(prng.next())
+        counts += 1
         if counts >= 10:
             break
