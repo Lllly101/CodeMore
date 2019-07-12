@@ -1,31 +1,46 @@
 #include <stdio.h>
 
+void printUnsignedRange(int bytes) {
+    int bits = 8 * bytes;
+    unsigned long long to = (1LLU << (bits -1)) + ((1LL << (bits - 1)) - 1);
+    
+    printf(" 0 to %llu\n\n", to);
+}
+
+void printSignedRange(int bytes) {
+    int bits = 8 * bytes;
+    
+    long long from = -(1LL << (bits - 1));
+    long long to   =  (1LL << (bits - 1)) - 1;
+
+    printf(" %lld to %lld \n\n", from, to);
+}
+
 int main() {
 
-int a;
-float b;
-double c;
-char d;
+printf("Range of char =");
+printSignedRange(sizeof(char));
 
-long int e;
-short int f;
-signed long int g=0;
+printf("Range of unsigned char =");
+printUnsignedRange(sizeof(unsigned char));
 
-a = 1;
-while ( a > 0) {
-    a++;
-}
-printf("sizeof int is: %ld\n", sizeof(a));
-printf("int最小值: %d\n", a);
-printf("int最大值： %d\n", a-1);
+printf("Range of short =");
+printSignedRange(sizeof(short));
 
-b = 1;
-while ( b > 0 ) {
-    b++;
-}
-printf("sizeof float is %ld\n", sizeof(b));
-printf("float最大值: %f\n", b);
-printf("float最小值: %f\n", b-1);
+printf("Range of int =");
+printSignedRange(sizeof(int));
+
+printf("Range of unsigned int =");
+printUnsignedRange(sizeof(unsigned int));
+
+printf("Range of unsigned long =");
+printUnsignedRange(sizeof(unsigned long));
+
+printf("Range of long long =");
+printSignedRange(sizeof(long long));
+
+printf("Range of unsigned long long =");
+printUnsignedRange(sizeof(unsigned long long));
 
 return 0;
 }
