@@ -2,3 +2,4 @@ Pipfile*
 .DS_Store
 .idea
 public_vectors.txt
+*.out
